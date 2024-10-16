@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Self-Evaluation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        p, a {
+            font-size: 1.1em;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #34495e;
+        }
+        .result {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-content {
+            margin-top: 50px;
+        }
+        .back-to-top {
+            display: block;
+            margin-top: 20px;
+            text-align: right;
+        }
+        .back-to-top a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .back-to-top a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Self-Evaluate Your Homework</h1>
+
+        <div class="intro">
+            <h2>Welcome to Your Homework Self-Evaluation</h2>
+            <p>
+                This tool is designed to help you reflect on the effort, accuracy, and quality of your homework. Honest self-assessment is a powerful way to improve your learning. Based on your responses, you will receive feedback on how well you’ve completed the assignment.
+            </p>
+            <p>
+                Here’s what you’ll be evaluating:
+                <ul>
+                    <li><a href="#good-faith-effort">What does a "Good Faith Effort" look like?</a></li>
+                    <li><a href="#correctness">How do you check for correctness?</a></li>
+                    <li><a href="#quality">What does good quality work look like?</a></li>
+                </ul>
+            </p>
+        </div>
+
+        <form id="selfEvaluationForm">
+            <!-- Good Faith Effort Section -->
+            <div class="question">
+                <label>How much of the assignment did you show a "good faith" effort for?</label>
+                <input type="radio" name="effort" value="1"> 25% < x ≤ 50%<br>
+                <input type="radio" name="effort" value="2"> 50% < x ≤ 90%<br>
+                <input type="radio" name="effort" value="3"> 100%
+            </div>
+
+            <!-- Correctness Section -->
+            <div class="question">
+                <label>How correct are your answers?</label>
+                <input type="radio" name="correctness" value="1"> Frequently incorrect<br>
+                <input type="radio" name="correctness" value="2"> A mix of correct and incorrect, but more correct than not.<br>
+                <input type="radio" name="correctness" value="3"> All or almost all correct
+            </div>
+
+            <!-- Quality of Work Section -->
+            <div class="question">
+                <label>What is the quality of your work?</label>
+                <input type="radio" name="quality" value="1"> Low<br>
+                <input type="radio" name="quality" value="2"> Medium<br>
+                <input type="radio" name="quality" value="3"> High
+            </div>
+
+            <button type="button" onclick="evaluateHomework()">Submit</button>
+        </form>
+
+        <div id="result" class="result"></div>
+
+        <!-- Detailed Explanation Sections -->
+        <hr>
+        
+        <!-- Good Faith Effort Section -->
+        <div id="good-faith-effort" class="section-content">
+            <h2>What Does a "Good Faith Effort" Look Like?</h2>
+            <p>
+                In a math class, showing a "good faith" effort means that you’ve truly tried your best to engage with the assignment, even if you don’t get every answer correct. Here’s what that looks like:
+            </p>
+            <ul>
+                <li><strong>Attempting Every Problem</strong>: Even if you’re not sure how to solve a problem, you’ve made an honest attempt to work through it. Writing “?” or “IDK” is not a good faith effort—it just says you need to do more. Instead, try to write down what you do know or show the steps you tried, even if they didn’t lead to the right answer.</li>
+                <li><strong>Showing Your Work</strong>: For each problem, you write down your process clearly, including any steps you took to get to an answer. If you get stuck, you write down what you’ve tried. Writing “IDK” doesn’t help; explaining what you’ve done so far does.</li>
+                <li><strong>Using Resources When You’re Stuck</strong>: A good faith effort includes using the resources available to you. This means checking your textbook, including the glossary for definitions, looking back at notes and work from class, talking with students in your study group, coming in for help outside of class, searching for help on the web, or even using AI tools for guidance.</li>
+                <li><strong>Persistence</strong>: When a problem is difficult, you don’t give up easily. You try different approaches and look for patterns or connections to what you’ve learned in class. A good faith effort means staying engaged, even when things get tough.</li>
+                <li><strong>Learning from Mistakes</strong>: If you notice a mistake, you take the time to correct it, whether it’s on your own or after asking for help. A good faith effort isn’t just about the right answers; it’s about growing and improving through practice.</li>
+                <li><strong>Asking for Help</strong>: When you’re really stuck and can’t move forward, you ask questions in class, from a peer, or during study time. Reaching out is part of your effort to understand the material better.</li>
+            </ul>
+            <div class="back-to-top">
+                <a href="#">Back to Top</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Correctness Section -->
+        <div id="correctness" class="section-content">
+            <h2>How Do You Check for Correctness?</h2>
+            <p>
+                Checking your work is a crucial step in making sure your answers are correct and that you fully understand the problem. Here are some strategies to help you review your work effectively:
+            </p>
+            <ul>
+                <li><strong>Go Back Through Your Steps</strong>: After finishing a problem, take a few moments to go back through the steps you took. Carefully check each calculation and make sure you didn’t skip or miscalculate anything.</li>
+                <li><strong>Make Sure Your Answer Addresses the Question</strong>: One of the most important things to check is whether your answer actually addresses what the problem is asking. It’s easy to get focused on solving but overlook the actual question.</li>
+                <li><strong>Look for Red Flags</strong>: As you review, watch out for anything that doesn’t seem right—these are your red flags. For example, if you’re working with a graph, should it be increasing or decreasing based on the situation?</li>
+                <li><strong>Cross-Check Your Work with the Problem</strong>: Take a step back and think about the problem as a whole. Does your answer make sense in the context of the original question?</li>
+                <li><strong>Check Against Posted Solutions</strong>: If solutions have been posted, check your work against them. Compare your steps to the solutions to see if you missed anything or approached the problem differently.</li>
+                <li><strong>Use Your Resources</strong>: If you’re still unsure, don’t hesitate to use the resources available to you: check your textbook, notes from class, or talk to people in your study group.</li>
+                <li><strong>Avoid "Answer-Getting"</strong>: One caution to keep in mind is that math isn’t just about finding the right answer. The real goal is to deepen your understanding of the material and connect it to other concepts.</li>
+            </ul>
+            <div class="back-to-top">
+                <a href="#">Back to Top</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Quality Section -->
+        <div id="quality" class="section-content">
+            <h2>What Does Good Quality Work Look Like?</h2>
+            <p>
+                Good quality work is more than just getting the right answer; it’s about how clearly and carefully you communicate your process. Even if your math is correct, your work needs to be organized and easy to follow so that someone else (including your teacher!) can understand how you arrived at your solution.
+            </p>
+            <ul>
+                <li><strong>Neat and Organized</strong>: Your work should be laid out clearly and logically. Each step should follow from the last in a way that makes it easy for someone else to see how you worked through the problem. </li>
+                <li><strong>Vertical Orientation</strong>: Format your work vertically, starting at the top of the page and working your way down. This ensures that each step is clearly connected to the next.</li>
+                <li><strong>Clear Labeling</strong>: Label each part of your work, especially when solving multi-step problems. </li>
+                <li><strong>Show All Steps</strong>: Good quality work shows every step you took to arrive at your answer, not just the final result.</li>
+                <li><strong>Legible Numbers and Symbols</strong>: Make sure that your numbers and symbols are legible and not easily confused with other characters.</li>
+                <li><strong>Final Answer Highlighted or Boxed</strong>: When you reach your final answer, make sure it’s easy to find. </li>
+                <li><strong>Recheck Your Work</strong>: Good quality work involves rechecking each step to make sure it’s correct and that the work is consistent.</li>
+                <li><strong>Submitting Your Work</strong>: Make sure your scanned work is clear and legible, free of distractions like fingers, and well-framed.</li>
+            </ul>
+            <div class="back-to-top">
+                <a href="#">Back to Top</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function evaluateHomework() {
+            const form = document.getElementById('selfEvaluationForm');
+            let effort = form.effort.value;
+            let correctness = form.correctness.value;
+            let quality = form.quality.value;
+
+            let resultText = '';
+
+            // Check if all questions are answered
+            if (!effort || !correctness || !quality) {
+                resultText = 'Please make sure you answered all the questions.';
+            } else {
+                effort = parseInt(effort);
+                correctness = parseInt(correctness);
+                quality = parseInt(quality);
+
+                // Define the result based on effort, correctness, and quality combination
+                 if (effort === 1 && correctness === 1 && quality === 1) {
+                    resultText = 'At most a score of 5.';
+                } else if (effort === 1 && correctness === 2 && quality === 1) {
+                    resultText = 'At most a score of 5.5.';
+                } else if (effort === 1 && correctness === 3 && quality === 1) {
+                    resultText = 'At most a score of 5.5.';
+                } else if (effort === 2 && correctness === 1 && quality === 1) {
+                    resultText = 'At most a score of 6.5.';
+                } else if (effort === 2 && correctness === 2 && quality === 1) {
+                    resultText = 'At most a score of 6.5.';
+                } else if (effort === 2 && correctness === 3 && quality === 1) {
+                    resultText = 'At most a score of 7.';
+                } else if (effort === 3 && correctness === 1 && quality === 1) {
+                    resultText = 'At most a score of 7.5.';
+                } else if (effort === 3 && correctness === 2 && quality === 1) {
+                    resultText = 'At most a score of 8.';
+                } else if (effort === 3 && correctness === 3 && quality === 1) {
+                    resultText = 'At most a score of 8.';
+                } else if (effort === 1 && correctness === 1 && quality === 2) {
+                    resultText = 'At most a score of 5.';
+                } else if (effort === 1 && correctness === 2 && quality === 2) {
+                    resultText = 'At most a score of 5.5.';
+                } else if (effort === 1 && correctness === 3 && quality === 2) {
+                    resultText = 'At most a score of 6.';
+                } else if (effort === 2 && correctness === 1 && quality === 2) {
+                    resultText = 'At most a score of 7.';
+                } else if (effort === 2 && correctness === 2 && quality === 2) {
+                    resultText = 'At most a score of 7.5.';
+                } else if (effort === 2 && correctness === 3 && quality === 2) {
+                    resultText = 'At most a score of 8.';
+                } else if (effort === 3 && correctness === 1 && quality === 2) {
+                    resultText = 'At most a score of 8.';
+                } else if (effort === 3 && correctness === 2 && quality === 2) {
+                    resultText = 'At most a score of 8.5.';
+                } else if (effort === 3 && correctness === 3 && quality === 2) {
+                    resultText = 'At most a score of 9.5.';
+                } else if (effort === 1 && correctness === 1 && quality === 3) {
+                    resultText = 'At most a score of 5.';
+                } else if (effort === 1 && correctness === 2 && quality === 3) {
+                    resultText = 'At most a score of 5.5.';
+                } else if (effort === 1 && correctness === 3 && quality === 3) {
+                    resultText = 'At most a score of 6.';
+                } else if (effort === 2 && correctness === 1 && quality === 3) {
+                    resultText = 'At most a score of 8.';
+                } else if (effort === 2 && correctness === 2 && quality === 3) {
+                    resultText = 'At most a score of 8.5.';
+                } else if (effort === 2 && correctness === 3 && quality === 3) {
+                    resultText = 'At most a score of 9.';
+                } else if (effort === 3 && correctness === 1 && quality === 3) {
+                    resultText = 'At most a score of 8.5.';
+                } else if (effort === 3 && correctness === 2 && quality === 3) {
+                    resultText = 'At most a score of 9.5.';
+                } else if (effort === 3 && correctness === 3 && quality === 3) {
+                    resultText = 'At least a score of 10.';
+                }
+            }
+
+            document.getElementById('result').innerText = resultText;
+        }
+    </script>
+</body>
+</html>
